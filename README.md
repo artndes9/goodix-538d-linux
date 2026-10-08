@@ -5,6 +5,23 @@ It reuses the sensor's current Windows pairing key and does not flash firmware
 or provision a replacement key. Tested on a Dell Inspiron 7501 running
 Kubuntu/Ubuntu 26.04.1, including enrollment, verification and KDE unlock.
 
+## How this started
+
+I primarily use Linux on my Dell Inspiron 7501, and it was frustrating to have
+a built-in fingerprint reader that I couldn't use. It worked in Windows, but
+I couldn't find an option that worked for my Linux setup.
+
+One day, I decided to try Astra's capabilities on this problem. What started
+as an experiment became a working fingerprint integration for my laptop,
+using the sensor's existing pairing key without flashing its firmware.
+
+This builds on the work of libfprint and the community Goodix driver
+contributors credited below. I'm sharing the integration, tools and detailed
+instructions so other Linux users with compatible hardware can try it,
+contribute improvements, and hopefully avoid the same frustration.
+
+## Before installing
+
 **You need your own sensor's existing 32-byte pairing key.** A key is not
 included. A narrowly version-bound Windows recovery tool is included; it does
 not work with arbitrary Windows drivers. Read [key recovery](docs/WINDOWS-KEY.md)
