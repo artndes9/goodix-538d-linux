@@ -1,0 +1,19 @@
+name: Build and offline tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential git patch pkg-config python3 meson ninja-build \
+            libglib2.0-dev libgusb-dev libusb-1.0-0-dev libssl-dev libcairo2-dev libxml2-utils appstream
+      - name: Build and test without hardware or credentials
+        run: ./scripts/build.sh
+      - name: Validate public source package
+        run: python3 scripts/package.py --check

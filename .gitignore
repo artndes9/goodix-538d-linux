@@ -1,0 +1,26 @@
+# Generated source, builds and releases
+.work/
+dist/
+__pycache__/
+*.pyc
+# Credentials and biometric material must never be committed
+*.psk
+*.key
+*.bin
+*.candidate*
+*.pgm
+*.png
+*.raw
+*.pcap*
+*.dmp
+*.core
+*.log
+*.zip
+*.tar*
+windows-private/
+private/
+windows-context-*.json
+metadata.json
+calibration*
+prints/
+.env*

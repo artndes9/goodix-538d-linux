@@ -1,0 +1,13 @@
+{
+  "project": "goodix-538d-linux",
+  "version": "0.1.0",
+  "upstream_url": "https://github.com/lbssousa/libfprint.git",
+  "upstream_revision": "037912c17992d2abc81c79c40e85b45ba1d3871e",
+  "upstream_version": "1.94.10",
+  "patch": "patches/0001-existing-key-integration.patch",
+  "driver": "goodixtls53xd",
+  "usb_id": "27c6:538d",
+  "firmware": "GF5298_GM168SEC_APP_13016",
+  "license": "LGPL-2.1-or-later",
+  "release_type": "experimental source patch and integration tools"
+}
